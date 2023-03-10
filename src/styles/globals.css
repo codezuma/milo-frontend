@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mask-image{
+    mask-image: linear-gradient(to bottom, transparent, black);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black);
+}
+
+@layer components{
+    .btn-primary{
+        @apply px-4 h-fit py-2 bg-secondary text-white text-lg font-semibold rounded-2xl;
+    }
+}
