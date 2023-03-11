@@ -12,8 +12,8 @@ module.exports = {
     extend: {
       keyframes:{
         'pop':{ 
-          '0%':{transform:"scale(0.99),opacity:0.8"},
-          '75%':{transform:"scale(1.01)"},
+          '0%':{transform:"scale(0.50),opacity:0.5"},
+          '75%':{transform:"scale(0.90),opacity:0.7"},
           '100%':{transform:"scale(1),opacity:1"}
         } 
       },
@@ -30,7 +30,7 @@ module.exports = {
       }
       ,
       animation: {
-        'pop':'pop 0.3s linear forwards 1',
+        'pop':'pop 1s linear forwards 1',
       },
       yarncontainer: {
         padding: {
