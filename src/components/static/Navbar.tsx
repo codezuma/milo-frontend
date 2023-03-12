@@ -2,6 +2,7 @@ import { ModalContext } from "@/context/modal/modal-context";
 import Image from "next/image";
 import Link from "next/link";
 import { useContext } from "react";
+import LoginForm from "../auth/LoginForm";
 import { Form } from "./HeroSection";
 const Navbar = () => {
     const [openModal,closeModal] = useContext(ModalContext);
@@ -12,7 +13,7 @@ const Navbar = () => {
             <span>
                 <Image width={80} height={50} src={'logo/logo.svg'} className="" alt="milo"/>
             </span>
-        <button onClick={()=>{openModal(Form)}} className="btn-primary"> Log in </button>
+        <button onClick={()=>{openModal(<LoginForm/>)}} className="btn-primary"> Log in </button>
         </nav>
 
         </div>

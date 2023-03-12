@@ -9,6 +9,9 @@
 
 @layer components{
     .btn-primary{
-        @apply px-4 h-fit py-2 bg-secondary text-white text-lg font-semibold rounded-2xl;
+        @apply  bg-secondary hover:scale-[.98] transition-transform text-white btn;
+    }
+    .btn{
+        @apply px-4 h-fit py-2  text-base  font-semibold rounded-lg;
     }
 }
