@@ -5,19 +5,17 @@ import Modal from "./Modal";
 export const ModalContext = createContext<[(component: ReactNode) => unknown, () => unknown]>([() => console.log('Open modal'), () => console.log('Close modal')]);
 
 const ModalContextProvider = ({children}:PropsWithChildren)=>{
-  const [ChildComponent, setChildComponent] = useState<ReactNode>();
-
+  const [ChildComponent, setChildComponent] = useState<ReactNode|undefined>(undefined);
+ 
   const openModal = (component: ReactNode ) => setChildComponent(component);
   const closeModal = () => setChildComponent(undefined);
   return <>
   <ModalContext.Provider  value={[openModal,closeModal]}>
        <div className="relative">
-       {children}
 
-{Boolean(ChildComponent) ? 
- <Modal>
-   {ChildComponent}
- </Modal> : ''}
+       {children}
+       {ChildComponent==undefined?'': <Modal>{ChildComponent}</Modal> }
+       
        </div>
       
   </ModalContext.Provider>
